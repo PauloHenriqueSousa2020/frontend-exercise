@@ -1,51 +1,40 @@
-# Flecto: Frontend Exercise
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Welcome!
+## Getting Started
 
-Following our previous conversation, we’d like to invite you to our technical challenge where you can showcase all your talents. We know this we’ll be a walk-in-the-park and respect your schedule so rest assured that it won’t take too much of your spare time.
+First, run the development server:
 
-## **Overview**
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-The main goal of this exercise is for you to do a single page showing a paginated list (either as a table, list, or cards) of weird-named planets from Star Wars. You’ll consume a simple API from [SWAPI](https://swapi.dev/documentation#intro) which you’ll then treat and show.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Feel free to use any components’ library and any Jedi mind tricks you like.
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-Let's go!
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-## **Task requirements**
-The main requirements are:
-- The user should be able to search for planets;
-- The user should be able to paginate the list of planets;
-- The user should be able to see details about the selected planet.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-API Documentation: https://swapi.dev/documentation#intro
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## **Delivery instructions**
-Fork this repository to your own github profile and use it to develop your solution. After done, just send us the link for your forked repository.
+## Learn More
 
-## **What we expect**
-⚛️ React and TypeScript
+To learn more about Next.js, take a look at the following resources:
 
-🐞 Unit / integration tests
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-💅 A nice design using CSS
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-📄 Clear README.md
+## Deploy on Vercel
 
-## What w**e’d love to see**
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-🔥 NextJS
-
-🔥 TanStack Query / SWR
-
-## What would be nice
-If you have the time, you might want to add these to your project:
-
-🎨 Responsive layout
-
-📱 Mobile suppport
-
-## **Additional information**
-Feel free to reach out if you have any question and don’t hesitate regardless of how simple or silly your questions might look like. We are here to provide you all the conditions for you to shine ✨
-
-There’s no deadline only good sense.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
