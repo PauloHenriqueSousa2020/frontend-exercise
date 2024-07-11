@@ -1,4 +1,10 @@
+// libs
 import Image from "next/image";
+
+// components
+import { HomePlanetInfoCard } from "./HomePlanetInfoCard";
+
+// styles
 import styles from "./HomeLayout.module.css";
 
 export function HomeLayout() {
@@ -10,7 +16,7 @@ export function HomeLayout() {
           alt="Star Wars logo"
           src='/images/star-wars-logo.svg'
           width={200}
-          height={200}
+          height={85}
         />
       </div>
 
@@ -27,6 +33,8 @@ export function HomeLayout() {
           Explorar planetas
         </a>
       </div>
+
+      <HomePlanetInfoCard />
     </div>
   );
 }

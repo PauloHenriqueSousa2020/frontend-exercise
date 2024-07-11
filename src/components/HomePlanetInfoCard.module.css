@@ -1,0 +1,30 @@
+.planetInfoCardContainer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: var(--foreground-opacity);
+  width: 30%;
+  height: 22rem;
+  padding: 2.5rem 0.5rem 2.5rem 2.5rem;
+  right: -60px;
+  top: 75%;
+  transform: translateY(-50%);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 36px;
+}
+
+.title {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 2rem;
+  line-height: 130%;
+  font-Weight: 800;
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 130%;
+  font-Weight: 400;
+  margin-top: 2.5rem;
+  text-align: justify;
+  width: 75%;
+}

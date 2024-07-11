@@ -5,20 +5,21 @@
   background-image: url('/images/light-background.jpg');
   object-fit: fill;
 	background-size: cover;
+  inset: 0px;
 }
 
 .logoImg {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 10rem;
+  padding: 2rem 10rem;
 }
 
 .homeLayoutInfoWrapper {
   width: 40rem;
   text-align: justify;
-  margin-top: 160px;
-  margin-left: 160px;
+  margin-top: 10rem;
+  margin-left: 10rem;
 }
 
 .title {
@@ -26,6 +27,7 @@
   font-size: 2rem;
   line-height: 130%;
   font-Weight: 800;
+  margin-bottom: 2rem;
 }
 
 .description {
@@ -33,9 +35,8 @@
   font-size: 1.125rem;
   line-height: 130%;
   font-Weight: 700;
-  margin-top: 16px;
+  margin-bottom: 2rem;
 }
-
 
 .link {
   font-family: 'Baloo 2', sans-serif;
@@ -51,7 +52,8 @@
   background: linear-gradient(270deg, #262626, #115D8C, #8C1111);
   background-size: 600% 600%;
   animation: gradientMove 10s ease infinite;
-  margin-top: 16px;
+  margin-top: 1rem;
+  text-decoration: none;
 }
 
 .link:hover {

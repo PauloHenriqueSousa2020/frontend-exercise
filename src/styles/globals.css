@@ -1,5 +1,8 @@
 :root {
   --background: #F5F6FA;
+  --foreground: #747C7C;
+  --foreground-opacity: rgba(242, 242, 242, 0.6);
+  
   --primary: #262626;
 
   --base-button-text: #E7EDF4;
