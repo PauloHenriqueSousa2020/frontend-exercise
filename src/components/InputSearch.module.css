@@ -1,0 +1,21 @@
+.inputSearchContainer {
+  background-color: var(--background);
+  width: 24rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  /* bg-transparent w-full placeholder:text-secondary */
+}
+
+.input::placeholder {
+  color: var(--secondary);
+}

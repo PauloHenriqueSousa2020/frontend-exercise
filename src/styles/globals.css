@@ -5,6 +5,8 @@
 
   --primary: #262626;
 
+  --secondary: #707070;
+
   --base-button-text: #E7EDF4;
 
   --theme-switch-color: #FFEB3B;
@@ -17,6 +19,8 @@
 
   --primary: #E6E6E5;
 
+  --secondary: #E7EDF4;
+  
   --base-button-text: #E6E6E5;
 
   --theme-switch-color: #4eaaf6;
@@ -26,6 +30,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -41,6 +50,20 @@ button {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1rem;
+}
+
+:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+
+input:focus {
+  outline: transparent;
+  box-shadow: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 768px) {
