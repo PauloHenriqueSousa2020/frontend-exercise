@@ -1,16 +1,19 @@
 // libs
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 // components
-import { HomePlanetInfoCard } from "./HomePlanetInfoCard";
+import { HomePlanetInfoCard, ThemeSwitch } from "@/components";
 
 // styles
 import styles from "./HomeLayout.module.css";
 
 export function HomeLayout() {
-  return (
-    <div className={styles.homePageLayoutContainer}>
+  const { theme } = useTheme();
 
+  return (
+    <div className={theme === 'light' ? styles.homePageLayoutContainer : styles.homePageLayoutContainerDark}>
+      <ThemeSwitch />
       <div className={styles.logoImg}>
         <Image
           alt="Star Wars logo"

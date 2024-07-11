@@ -2,10 +2,24 @@
   --background: #F5F6FA;
   --foreground: #747C7C;
   --foreground-opacity: rgba(242, 242, 242, 0.6);
-  
+
   --primary: #262626;
 
   --base-button-text: #E7EDF4;
+
+  --theme-switch-color: #FFEB3B;
+}
+
+.dark {
+  --background: #0D0D0D;
+  --foreground: #262626;
+  --foreground-opacity: rgba(38, 38, 38, 0.7);
+
+  --primary: #E6E6E5;
+
+  --base-button-text: #E6E6E5;
+
+  --theme-switch-color: #4eaaf6;
 }
 
 * {
@@ -21,7 +35,9 @@ body {
   line-height: 1.4;
 }
 
-body, input, button {
+body,
+input,
+button {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1rem;

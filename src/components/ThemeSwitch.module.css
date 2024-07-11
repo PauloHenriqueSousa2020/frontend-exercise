@@ -1,0 +1,41 @@
+.themeSwitchContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  top: 3.5rem;
+  left: 1.25rem;
+}
+
+.label {
+  background-color: transparent;
+  border: 1px solid var(--theme-switch-color);
+  border-radius: 9999px;
+  cursor: pointer;
+  position: relative;
+  width: 3.5rem;
+  height: 2rem;
+}
+
+.input {
+  display: none;
+}
+
+.iconsWrapperLight {
+  position: absolute;
+  transition: all;
+  transition-duration: 0.2s;
+  color: var(--theme-switch-color);
+  left: 4px;
+  top: 2px;
+  /* absolute transition-all duration-500 text-themeSwitchColor */
+}
+
+.iconsWrapperDark {
+  position: absolute;
+  transition: all;
+  transition-duration: 0.2s;
+  color: var(--theme-switch-color);
+  left: 30px;
+  top: 2px;
+}
