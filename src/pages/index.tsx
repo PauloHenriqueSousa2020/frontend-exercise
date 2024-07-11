@@ -1,5 +1,13 @@
+// components
+import { HomeLayout } from "@/components";
+
+// styles
+import styles from "@/styles/Home.module.css";
+
 export default function Home() {
   return (
-    <p>Initial Structure</p>
+    <div className={styles.homeContainer}>
+      <HomeLayout />
+    </div>
   );
 }

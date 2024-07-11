@@ -1,6 +1,8 @@
 :root {
   --background: #F5F6FA;
   --primary: #262626;
+
+  --base-button-text: #E7EDF4;
 }
 
 * {
