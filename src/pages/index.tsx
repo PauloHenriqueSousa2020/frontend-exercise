@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // components
-import { HomeLayout, InputSearch } from "@/components";
+import { Card, HomeLayout, InputSearch } from "@/components";
 
 // hooks
 import { useGetPlanets } from "@/hooks/useGetPlanets";
@@ -17,7 +17,6 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const { planets, totalElements } = useGetPlanets({ search, page })
-
 
   const handleSearch = (value: string) => {
     setSearch(value);
@@ -40,15 +39,18 @@ export default function Home() {
 
             <InputSearch handleChangeDebounce={searchDebounce} />
           </div>
-        </div>
 
-        <div className={styles.planetsWrapper}>
-          {/* Paginação */}
+          <div className={styles.planetsWrapper}>
+            {/* Paginação */}
 
-           <div className="flex flex-wrap justify-center items-center gap-10">
-            {planets.map((planet, index) => (
-              <p key={index}>{planet.name}</p>
-            ))}
+            <div className={styles.planetList}>
+              {planets.map((planet, index) => (
+                <Card
+                  planet={planet}
+                  key={index}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

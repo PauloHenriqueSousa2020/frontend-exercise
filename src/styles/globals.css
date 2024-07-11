@@ -3,10 +3,16 @@
   --foreground: #747C7C;
   --foreground-opacity: rgba(242, 242, 242, 0.6);
 
+  --card: #E6E6E5;
+
   --primary: #262626;
+  --primary-foreground: #262626;
 
   --secondary: #707070;
 
+  --border: #115D8C;
+
+  --base-button: #8C1111;
   --base-button-text: #E7EDF4;
 
   --theme-switch-color: #FFEB3B;
@@ -17,10 +23,16 @@
   --foreground: #262626;
   --foreground-opacity: rgba(38, 38, 38, 0.7);
 
+  --card: #E6E6E5;
+
   --primary: #E6E6E5;
+  --primary-foreground: #262626;
 
   --secondary: #E7EDF4;
   
+  --border: #115D8C;
+
+  --base-button: #8C1111;
   --base-button-text: #E6E6E5;
 
   --theme-switch-color: #4eaaf6;
@@ -54,8 +66,9 @@ button {
 
 :focus {
   outline: transparent;
-  box-shadow: 0 0 0 1px var(--foreground);
+  box-shadow: 0 0 0 1px var(--border);
 }
+
 
 input:focus {
   outline: transparent;
