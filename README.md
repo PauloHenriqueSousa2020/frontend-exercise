@@ -2,6 +2,8 @@
 
 A frontend application to list and search for Star Wars planets using the [SWAPI](https://swapi.dev/documentation#intro) API.
 
+## [LIVE DEMO](https://frontend-exercise-ten.vercel.app)
+
 ## Technologies Used
 
 - React JS 
