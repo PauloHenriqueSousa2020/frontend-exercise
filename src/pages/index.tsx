@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // components
-import { Card, HomeLayout, InputSearch } from "@/components";
+import { Card, HomeLayout, InputSearch, Pagination } from "@/components";
 
 // hooks
 import { useGetPlanets } from "@/hooks/useGetPlanets";
@@ -41,7 +41,12 @@ export default function Home() {
           </div>
 
           <div className={styles.planetsWrapper}>
-            {/* Paginação */}
+            <Pagination
+              count={totalElements}
+              perPage={10}
+              page={page}
+              onChange={(newPage) => setPage(newPage)}
+            />
 
             <div className={styles.planetList}>
               {planets.map((planet, index) => (

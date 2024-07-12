@@ -1,0 +1,53 @@
+.paginationContainer {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding-right: 0.5rem;
+  cursor: pointer;
+  color: var(--base-button-text);
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.25rem;
+  line-height: 130%;
+  font-weight: 700;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  text-decoration: underline;
+  font-family: 'Baloo 2', sans-serif;
+  color: var(--base-button-text);
+  font-size: 1.25rem;
+  line-height: 130%;
+  font-weight: 700;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.pagesWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.page {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activePage {
+  background: var(--base-button);
+  color: var(--base-button-text);
+  border-radius: 9999px;
+}
