@@ -36,6 +36,16 @@ export default function Home() {
     setPage(1);
   }
 
+  const paginationMobileIsValid = page < totalElements / 10
+
+  const handleDecrementPage = () => {
+    setPage(page - 1)
+  }
+
+  const handleIncrementPage = () => {
+    setPage(page + 1)
+  }
+
   const searchDebounce = useDebounce(handleSearch, 1000);
 
   return (
@@ -80,6 +90,25 @@ export default function Home() {
                           handleOpenPlanetDetails={handleOpenPlanetDetails}
                         />
                       ))}
+                    </div>
+
+                    <div className={styles.buttonMobileWrapper}>
+                      <button
+                        className={styles.buttonMobile}
+                        onClick={handleDecrementPage}
+                        disabled={page === 1}
+                      >
+                        Página anterior
+                      </button>
+
+                      <button
+                        className={styles.buttonMobile}
+                        onClick={handleIncrementPage}
+                        disabled={!paginationMobileIsValid}
+                      >
+                        Próxima página
+                      </button>
+
                     </div>
                   </div>
                 ) : (

@@ -1,5 +1,5 @@
 .paginationContainer {
-  display: flex;
+  display: none;
   gap: 0.5rem;
   justify-content: center;
   padding-right: 0.5rem;
@@ -50,4 +50,10 @@
   background: var(--base-button);
   color: var(--base-button-text);
   border-radius: 9999px;
+}
+
+@media (min-width: 768px) {
+  .paginationContainer {
+    display: flex;
+  }
 }

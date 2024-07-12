@@ -28,7 +28,6 @@
   color: var(--theme-switch-color);
   left: 4px;
   top: 2px;
-  /* absolute transition-all duration-500 text-themeSwitchColor */
 }
 
 .iconsWrapperDark {
@@ -36,6 +35,13 @@
   transition: all;
   transition-duration: 0.2s;
   color: var(--theme-switch-color);
-  left: 30px;
-  top: 2px;
+  left: 22px;
+  top: 0px;
+}
+
+@media (min-width: 768px) {
+  .iconsWrapperDark {
+    left: 30px;
+    top: 2px;
+  }
 }

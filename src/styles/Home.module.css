@@ -4,7 +4,7 @@
 
 .sectionWrapper {
   width: 100%;
-  padding: 2.5rem;
+  padding: 0.5rem;
 }
 
 .wrapper {
@@ -18,18 +18,16 @@
 
 .searchWrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 2rem;
-  padding: 0 3rem;
 }
 
 .title {
   font-family: 'Baloo 2', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   line-height: 130%;
-  font-Weight: 800;
+  font-Weight: 700;
 }
 
 .cardSkeletonContainer {
@@ -69,6 +67,38 @@
   gap: 2.5rem;
 }
 
+.buttonMobileWrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.buttonMobile {
+  font-size: 0.875rem;
+  line-height: 160%;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  background-color: var(--base-button);
+  color: var(--base-button-text);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all;
+  transition-duration: 0.2s;
+  border: none;
+}
+
+.buttonMobile:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.buttonMobile:hover {
+  background: linear-gradient(270deg, #262626, #115D8C, #8C1111);
+  background-size: 600% 600%;
+  animation: gradientMove 10s ease infinite;
+}
+
 .notFoundPlanet {
   font-family: 'Baloo 2', sans-serif;
   font-size: 2rem;
@@ -82,8 +112,61 @@
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .sectionWrapper {
+    padding: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-Weight: 800;
+  }
+
+  .buttonMobileWrapper {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .searchWrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes pulse {
   50% {
     opacity: .5;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }

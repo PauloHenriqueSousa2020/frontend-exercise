@@ -19,7 +19,6 @@
   border-radius: 6px 36px;
   padding: 2rem;
   z-index: 10;
-  width: 60%;
   background: linear-gradient(270deg, #262626, #115D8C, #8C1111);
   background-size: 600% 600%;
   animation: gradientMove 10s ease infinite;
@@ -35,9 +34,9 @@
 
 .modalTitle {
   font-family: 'Baloo 2', sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 130%;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .modalButton {
@@ -50,9 +49,9 @@
 
 .modalFirstSection {
   font-family: 'Baloo 2', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   line-height: 130%;
-  font-weight: 800;
+  font-weight: 700;
   border-top: 1px solid var(--border-foreground);
   padding-top: 1rem;
   margin: 1rem 0;
@@ -63,11 +62,32 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   font-family: 'Baloo 2', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   line-height: 130%;
-  font-weight: 800;
+  font-weight: 700;
   border-top: 1px solid var(--border-foreground);
   padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .modalWrapper {
+    width: 60%;
+  }
+
+  .modalTitle {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .modalFirstSection {
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  
+  .modalLastSection {
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
 }
 
 @keyframes gradientMove {
