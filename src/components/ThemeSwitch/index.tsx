@@ -16,17 +16,18 @@ export function ThemeSwitch() {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
-
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   const handleThemeSwitch = () => {
     currentTheme === "light" ? setTheme("dark") : setTheme("light")
   }
 
+  if (!mounted) return null;
+
   return (
     <div
       className={styles.themeSwitchContainer}
+      data-testid='theme-switch-container'
     >
       <label className={styles.label}>
         <input
@@ -37,8 +38,8 @@ export function ThemeSwitch() {
         />
         <div className={currentTheme === "light" ? styles.iconsWrapperLight : styles.iconsWrapperDark}>
           {currentTheme === 'light'
-            ? <Sun size={24} />
-            : <Moon size={24} />
+            ? <Sun size={24} data-testid='sun-icon' />
+            : <Moon size={24} data-testid='moon-icon' />
           }
         </div>
       </label >

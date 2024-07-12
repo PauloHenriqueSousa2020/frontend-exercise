@@ -24,6 +24,7 @@ export function Card({ planet, handleOpenPlanetDetails }: CardProps) {
   return (
     <div
       className={styles.cardContainer}
+      data-testid='card-container'
     >
       <Image
         alt="Imagem de um círculo com várias bolas orbitando"
@@ -31,13 +32,17 @@ export function Card({ planet, handleOpenPlanetDetails }: CardProps) {
         width={200}
         height={200}
         className={styles.image}
+        data-testid="planet-image"
       />
 
       <h1 className={styles.name}>
         {planet.name}
       </h1>
 
-      <div className={styles.infoWrapper}>
+      <div
+        className={styles.infoWrapper}
+        data-testid='card-border-line'
+      >
         <label className={styles.titleLabel}>Terreno: <span className={styles.titleSpan}>{planet.terrain}</span></label>
         <label className={styles.titleLabel}>Diamêtro: <span className={styles.titleSpan}>{planet.diameter}</span></label>
         <label className={styles.titleLabel}>Clima: <span className={styles.titleSpan}>{planet.climate}</span></label>

@@ -31,7 +31,10 @@ export function PlanetDetailsModal({ isOpen, handleCloseModal, url }: PlanetDeta
   return (
     <>
       {isOpen && (
-        <div className={styles.planetDetailsModalContainer}>
+        <div
+          className={styles.planetDetailsModalContainer}
+          data-testid='planet-details-modal-container'
+        >
           <div className={styles.modalOverlay} />
 
           {isValidating ? (
@@ -40,7 +43,12 @@ export function PlanetDetailsModal({ isOpen, handleCloseModal, url }: PlanetDeta
             <div className={styles.modalWrapper}>
               <header className={styles.modalHeader}>
                 <h1 className={styles.modalTitle}>Planeta: {planetDetail.name}</h1>
-                <button className={styles.modalButton} onClick={handleCloseModal}>
+                <button
+                  className={styles.modalButton}
+                  onClick={handleCloseModal}
+                  aria-label="close"
+                  data-testid='closeModal'
+                >
                   <X size={22} />
                 </button>
               </header>

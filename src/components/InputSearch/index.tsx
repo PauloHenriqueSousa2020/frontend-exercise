@@ -28,7 +28,7 @@ export function InputSearch({ handleChangeDebounce }: InputSearchProps) {
 
   return (
     <div className={styles.inputSearchContainer}>
-      <MagnifyingGlass size={24} />
+      <MagnifyingGlass size={24} data-testid='search-icon' />
 
       <input
         className={styles.input}

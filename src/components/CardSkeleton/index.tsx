@@ -5,18 +5,38 @@ export function CardSkeleton() {
   return (
     <div
       className={styles.skeletonContainer}
+      data-testid="card-skeleton-container"
     >
-      <div className={styles.skeletonRounded} />
-      <div className={styles.skeletonHeader} />
+      <div
+        className={styles.skeletonRounded}
+        data-testid="upper-circle"
+      />
+      <div
+        className={styles.skeletonHeader}
+        data-testid="horizontal-line"
+      />
 
-      <div className={styles.skeletonInfos}>
+      <div
+        className={styles.skeletonInfos}
+        data-testid="text-bars"
+      >
         {[...Array(5)].map((_, index) => (
-          <div key={index} className={styles.skeletonLine} />
+          <div
+            key={index}
+            className={styles.skeletonLine}
+            data-testid="text-bar"
+          />
         ))}
       </div>
 
-      <div className={styles.skeletonBorder} />
-      <div className={styles.skeletonButton} />
+      <div
+        className={styles.skeletonBorder}
+        data-testid="separator-line"
+      />
+      <div
+        className={styles.skeletonButton}
+        data-testid="bottom-button"
+      />
     </div>
   )
 }

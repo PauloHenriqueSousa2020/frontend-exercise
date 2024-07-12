@@ -43,7 +43,10 @@ export function HomePlanetInfoCard() {
   }, [planetsInfo.length]);
 
   return (
-    <div className={styles.planetInfoCardContainer}>
+    <div
+      className={styles.planetInfoCardContainer}
+      data-testid='planet-info-card-container'
+    >
       <h1 className={styles.title}>{planetsInfo[index].title}</h1>
       <p className={styles.description}>{planetsInfo[index].description}</p>
     </div>
