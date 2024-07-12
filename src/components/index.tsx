@@ -1,4 +1,5 @@
 export { Card } from "./Card";
+export { CardSkeleton } from "./CardSkeleton";
 export { HomeLayout } from "./HomeLayout";
 export { HomePlanetInfoCard } from "./HomePlanetInfoCard";
 export { InputSearch } from "./InputSearch";

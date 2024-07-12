@@ -6,7 +6,6 @@
  *
  */
 
-
 // libs
 import Image from "next/image";
 
@@ -20,7 +19,6 @@ interface CardProps {
   planet: PlanetInterface;
   handleOpenPlanetDetails: (url: string) => void;
 }
-
 
 export function Card({ planet, handleOpenPlanetDetails }: CardProps) {
   return (

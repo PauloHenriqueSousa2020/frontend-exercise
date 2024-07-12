@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // components
-import { Card, HomeLayout, InputSearch, Pagination, PlanetDetailsModal } from "@/components";
+import { Card, CardSkeleton, HomeLayout, InputSearch, Pagination, PlanetDetailsModal } from "@/components";
 
 // hooks
 import { useGetPlanets } from "@/hooks/useGetPlanets";
@@ -19,7 +19,7 @@ export default function Home() {
   const [showPlanetDetails, setShowPlanetDetails] = useState(false);
   const [planetDetailsURL, setPlanetDetailsURL] = useState("");
 
-  const { planets, totalElements } = useGetPlanets({ search, page })
+  const { planets, totalElements, isValidating } = useGetPlanets({ search, page })
 
   const handleOpenPlanetDetails = (url: string) => {
     setPlanetDetailsURL(url);
@@ -53,24 +53,42 @@ export default function Home() {
             <InputSearch handleChangeDebounce={searchDebounce} />
           </div>
 
-          <div className={styles.planetsWrapper}>
-            <Pagination
-              count={totalElements}
-              perPage={10}
-              page={page}
-              onChange={(newPage) => setPage(newPage)}
-            />
+          {isValidating ?
+            <div className={styles.cardSkeletonContainer}>
+              <div className={styles.cardSkeletonPaginationLine} />
+              <div className={styles.cardSkeletonWrapper}>
+                {[...Array(10)].map((_, index) => (
+                  <CardSkeleton key={index} />
+                ))}
+              </div>
+            </div> : (
+              <>
+                {planets.length > 0 ? (
+                  <div className={styles.planetsWrapper}>
+                    <Pagination
+                      count={totalElements}
+                      perPage={10}
+                      page={page}
+                      onChange={(newPage) => setPage(newPage)}
+                    />
 
-            <div className={styles.planetList}>
-              {planets.map((planet, index) => (
-                <Card
-                  key={index}
-                  planet={planet}
-                  handleOpenPlanetDetails={handleOpenPlanetDetails}
-                />
-              ))}
-            </div>
-          </div>
+                    <div className={styles.planetList}>
+                      {planets.map((planet, index) => (
+                        <Card
+                          key={index}
+                          planet={planet}
+                          handleOpenPlanetDetails={handleOpenPlanetDetails}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <h1 className={styles.notFoundPlanet}>
+                    Nenhum planeta encontrado.
+                  </h1>
+                )}
+              </>
+            )}
         </div>
       </section>
 
