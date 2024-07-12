@@ -18,11 +18,11 @@ import { PlanetInterface } from "@/@types/PlanetInterface";
 
 interface CardProps {
   planet: PlanetInterface;
-  /* handleOpenPlanetDetails: (url: string) => void; */
+  handleOpenPlanetDetails: (url: string) => void;
 }
 
 
-export function Card({ planet, /* handleOpenPlanetDetails */ }: CardProps) {
+export function Card({ planet, handleOpenPlanetDetails }: CardProps) {
   return (
     <div
       className={styles.cardContainer}
@@ -51,7 +51,7 @@ export function Card({ planet, /* handleOpenPlanetDetails */ }: CardProps) {
 
       <button
         className={styles.button}
-      /* onClick={() => handleOpenPlanetDetails(planet.url)} */
+        onClick={() => handleOpenPlanetDetails(planet.url)}
       >
         Ver detalhes
       </button>

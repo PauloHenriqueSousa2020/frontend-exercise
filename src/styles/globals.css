@@ -8,9 +8,12 @@
   --primary: #262626;
   --primary-foreground: #262626;
 
+  --gradient-background-text: #E7EDF4;
+
   --secondary: #707070;
 
   --border: #115D8C;
+  --border-foreground: #E7EDF4;
 
   --base-button: #8C1111;
   --base-button-text: #E7EDF4;
@@ -28,9 +31,12 @@
   --primary: #E6E6E5;
   --primary-foreground: #262626;
 
+  --gradient-background-text: #E6E6E5;
+
   --secondary: #E7EDF4;
-  
+
   --border: #115D8C;
+  --border-foreground: #E7EDF4;
 
   --base-button: #8C1111;
   --base-button-text: #E6E6E5;

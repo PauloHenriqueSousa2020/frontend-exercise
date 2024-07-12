@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // components
-import { Card, HomeLayout, InputSearch, Pagination } from "@/components";
+import { Card, HomeLayout, InputSearch, Pagination, PlanetDetailsModal } from "@/components";
 
 // hooks
 import { useGetPlanets } from "@/hooks/useGetPlanets";
@@ -16,7 +16,20 @@ import styles from "@/styles/Home.module.css";
 export default function Home() {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
+  const [showPlanetDetails, setShowPlanetDetails] = useState(false);
+  const [planetDetailsURL, setPlanetDetailsURL] = useState("");
+
   const { planets, totalElements } = useGetPlanets({ search, page })
+
+  const handleOpenPlanetDetails = (url: string) => {
+    setPlanetDetailsURL(url);
+    setShowPlanetDetails(true);
+  }
+
+  const handleClosePlanetDetails = () => {
+    setPlanetDetailsURL('');
+    setShowPlanetDetails(false);
+  }
 
   const handleSearch = (value: string) => {
     setSearch(value);
@@ -51,14 +64,21 @@ export default function Home() {
             <div className={styles.planetList}>
               {planets.map((planet, index) => (
                 <Card
-                  planet={planet}
                   key={index}
+                  planet={planet}
+                  handleOpenPlanetDetails={handleOpenPlanetDetails}
                 />
               ))}
             </div>
           </div>
         </div>
       </section>
+
+      <PlanetDetailsModal
+        isOpen={showPlanetDetails}
+        handleCloseModal={handleClosePlanetDetails}
+        url={planetDetailsURL}
+      />
     </div>
   );
 }

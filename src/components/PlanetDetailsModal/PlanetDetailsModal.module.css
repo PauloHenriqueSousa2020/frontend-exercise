@@ -1,0 +1,85 @@
+.planetDetailsModalContainer {
+  position: fixed;
+  inset: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modalOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--background);
+  opacity: 0.5;
+}
+
+.modalWrapper {
+  margin: 0 2rem;
+  border-radius: 6px 36px;
+  padding: 2rem;
+  z-index: 10;
+  width: 60%;
+  background: linear-gradient(270deg, #262626, #115D8C, #8C1111);
+  background-size: 600% 600%;
+  animation: gradientMove 10s ease infinite;
+  color: var(--gradient-background-text);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.modalTitle {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 2rem;
+  line-height: 130%;
+  font-weight: 800;
+}
+
+.modalButton {
+  background-color: transparent;
+  border: none;
+  color: var(--gradient-background-text);
+  cursor: pointer;
+  font-size: 0px;
+}
+
+.modalFirstSection {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.5rem;
+  line-height: 130%;
+  font-weight: 800;
+  border-top: 1px solid var(--border-foreground);
+  padding-top: 1rem;
+  margin: 1rem 0;
+}
+
+.modalLastSection {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.5rem;
+  line-height: 130%;
+  font-weight: 800;
+  border-top: 1px solid var(--border-foreground);
+  padding-top: 1rem;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
