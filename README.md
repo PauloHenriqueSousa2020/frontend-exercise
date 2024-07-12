@@ -112,5 +112,8 @@ cd frontend-exercise
 # Install the project dependencies:
 yarn install or npm install
 
+# To run the project:
+yarn dev or npm run dev
+
 # To run the unit tests after installing the project dependencies:
 yarn test or yarn test:coverage
