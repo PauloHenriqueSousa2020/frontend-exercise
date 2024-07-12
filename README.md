@@ -74,7 +74,7 @@ A frontend application to list and search for Star Wars planets using the [SWAPI
 	</tr>
 </table>
 
-### Unit test
+### Tests using Jest
 
 <table style="width:100%;">
 	<tr>
