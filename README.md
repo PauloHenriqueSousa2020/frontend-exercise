@@ -2,6 +2,8 @@
 
 A frontend application to list and search for Star Wars planets using the [SWAPI](https://swapi.dev/documentation#intro) API.
 
+## [LIVE DEMO](https://frontend-exercise-ten.vercel.app)
+
 ## Technologies Used
 
 - React JS 
@@ -74,7 +76,7 @@ A frontend application to list and search for Star Wars planets using the [SWAPI
 	</tr>
 </table>
 
-### Unit test
+### Tests using Jest
 
 <table style="width:100%;">
 	<tr>
@@ -111,6 +113,9 @@ cd frontend-exercise
 
 # Install the project dependencies:
 yarn install or npm install
+
+# To run the project:
+yarn dev or npm run dev
 
 # To run the unit tests after installing the project dependencies:
 yarn test or yarn test:coverage
