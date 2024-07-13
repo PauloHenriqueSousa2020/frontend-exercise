@@ -12,7 +12,7 @@ export function HomeLayout() {
   const { theme } = useTheme();
 
   return (
-    <div className={theme === 'light' ? styles.homePageLayoutContainer : styles.homePageLayoutContainerDark}>
+    <div className={theme === 'dark' ? styles.homePageLayoutContainerDark : styles.homePageLayoutContainer}>
       <ThemeSwitch />
       <div className={styles.logoImg}>
         <Image
