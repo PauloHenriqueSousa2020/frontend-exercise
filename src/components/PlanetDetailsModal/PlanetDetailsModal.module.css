@@ -19,9 +19,7 @@
   border-radius: 6px 36px;
   padding: 2rem;
   z-index: 10;
-  background: linear-gradient(270deg, #262626, #115D8C, #8C1111);
-  background-size: 600% 600%;
-  animation: gradientMove 10s ease infinite;
+  background-color: var(--foreground);
   color: var(--gradient-background-text);
 }
 
@@ -87,19 +85,5 @@
   .modalLastSection {
     font-size: 1.5rem;
     font-weight: 800;
-  }
-}
-
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
   }
 }
